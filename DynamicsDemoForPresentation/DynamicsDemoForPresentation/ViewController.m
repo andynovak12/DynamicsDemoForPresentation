@@ -20,6 +20,7 @@
     UIGravityBehavior *gravityBehavior = [[UIGravityBehavior alloc] initWithItems:@[self.basketball]];
 //    gravityBehavior.magnitude = 40;
     [self.animator addBehavior:gravityBehavior];
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -15,6 +15,8 @@
 		A13E1D051C92287D00259904 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13E1D031C92287D00259904 /* LaunchScreen.storyboard */; };
 		A13E1D0D1C934DEA00259904 /* basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = A13E1D0C1C934DEA00259904 /* basketball.png */; };
 		A13E1D101C93595300259904 /* RaindropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A13E1D0F1C93595300259904 /* RaindropViewController.m */; };
+		A13E1D121C935C5100259904 /* raindrop.png in Resources */ = {isa = PBXBuildFile; fileRef = A13E1D111C935C5100259904 /* raindrop.png */; };
+		A13E1D141C935CA400259904 /* umbrella.png in Resources */ = {isa = PBXBuildFile; fileRef = A13E1D131C935CA400259904 /* umbrella.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		A13E1D0C1C934DEA00259904 /* basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = basketball.png; path = ../../../../../Downloads/basketball.png; sourceTree = "<group>"; };
 		A13E1D0E1C93595300259904 /* RaindropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaindropViewController.h; sourceTree = "<group>"; };
 		A13E1D0F1C93595300259904 /* RaindropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaindropViewController.m; sourceTree = "<group>"; };
+		A13E1D111C935C5100259904 /* raindrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = raindrop.png; path = ../../../../../Downloads/raindrop.png; sourceTree = "<group>"; };
+		A13E1D131C935CA400259904 /* umbrella.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = umbrella.png; path = ../../../../../Downloads/umbrella.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 				A13E1D0E1C93595300259904 /* RaindropViewController.h */,
 				A13E1D0F1C93595300259904 /* RaindropViewController.m */,
 				A13E1D011C92287D00259904 /* Assets.xcassets */,
+				A13E1D131C935CA400259904 /* umbrella.png */,
+				A13E1D111C935C5100259904 /* raindrop.png */,
 				A13E1D0C1C934DEA00259904 /* basketball.png */,
 				A13E1D031C92287D00259904 /* LaunchScreen.storyboard */,
 				A13E1D061C92287D00259904 /* Info.plist */,
@@ -145,8 +151,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A13E1D121C935C5100259904 /* raindrop.png in Resources */,
 				A13E1D051C92287D00259904 /* LaunchScreen.storyboard in Resources */,
 				A13E1D021C92287D00259904 /* Assets.xcassets in Resources */,
+				A13E1D141C935CA400259904 /* umbrella.png in Resources */,
 				A13E1D0D1C934DEA00259904 /* basketball.png in Resources */,
 				A13E1D001C92287D00259904 /* Main.storyboard in Resources */,
 			);
