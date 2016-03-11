@@ -19,11 +19,26 @@
 - (IBAction)basketballTapped:(id)sender {
     UIGravityBehavior *gravityBehavior = [[UIGravityBehavior alloc] initWithItems:@[self.basketball]];
 //    gravityBehavior.magnitude = 40;
-    [self.animator addBehavior:gravityBehavior];
     
+     UICollisionBehavior *collision = [[UICollisionBehavior alloc]initWithItems:@[self.basketball]];
+    
+    collision.translatesReferenceBoundsIntoBoundary = YES;
+    
+    collision.collisionMode = UICollisionBehaviorModeEverything;
+    
+    collision.collisionDelegate = self;
+    
+    UIDynamicItemBehavior *ballDynamic = [[UIDynamicItemBehavior alloc]initWithItems:@[self.basketball]];
+    
+    ballDynamic.elasticity = 1.0;
+    
+    [self.animator addBehavior:ballDynamic];
+    [self.animator addBehavior:gravityBehavior];
+<<<<<<< HEAD
+    
+=======
+    [self.animator addBehavior:collision];
+>>>>>>> e4e4ea088059debfddbc64eba873361319a0ef9e
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
 @end
