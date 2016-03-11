@@ -21,6 +21,12 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+//    
+//    CGRect      buttonFrame = self.raindrop.frame;
+//    buttonFrame.size = CGSizeMake(500, 70);
+//    self.raindrop.frame = buttonFrame;
+
+    
     
     // Initialize the animator.
     self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
@@ -28,23 +34,59 @@
 
 
 - (IBAction)raindropTapped:(id)sender {
+    while (YES) {
+        // Setup the raindrop view.
+        UIView *raindrop1 = [[UIView alloc] initWithFrame:CGRectMake(100.0, 100.0, 50.0, 50.0)];
+        raindrop1.backgroundColor = [UIColor orangeColor];
+
+        raindrop1.layer.borderColor = [UIColor blackColor].CGColor;
+        raindrop1.layer.borderWidth = 0.0;
+        [self.view addSubview:raindrop1];
+//        UIGravityBehavior *gravityForInitialRaindrop = [[UIGravityBehavior alloc] initWithItems:@[raindrop1]];
+//        [self.animator addBehavior:gravityForInitialRaindrop];
+    }
+    
+    
+    
+    
+    
+    
     // gravity for initial raindrop
     UIGravityBehavior *gravityForInitialRaindrop = [[UIGravityBehavior alloc] initWithItems:@[self.raindrop]];
     [self.animator addBehavior:gravityForInitialRaindrop];
 
     //create collisions
     UICollisionBehavior *collisionBehavior = [[UICollisionBehavior alloc] initWithItems:@[self.raindrop, self.umbrella]];
-    //makes our main view’s bounds work as boundaries for the items that will collide.
-//    collisionBehavior.translatesReferenceBoundsIntoBoundary = YES;
-//    [collisionBehavior addBoundaryWithIdentifier:@"tabbar" fromPoint:self.tabBarController.tabBar.frame.origin toPoint:CGPointMake(self.tabBarController.tabBar.frame.origin.x + self.tabBarController.tabBar.frame.size.width, self.tabBarController.tabBar.frame.origin.y)];
-    //dictates that all edges of items that participate to a collision will have the desired behavior.
     collisionBehavior.collisionMode = UICollisionBehaviorModeEverything;
-    
+//    collisionBehavior.translatesReferenceBoundsIntoBoundary = YES;
     //make view collisionDelegate
     collisionBehavior.collisionDelegate = self;
     [self.animator addBehavior:collisionBehavior];
     
+    //set properties of the raindrop
+    UIDynamicItemBehavior *raindropBehavior = [[UIDynamicItemBehavior alloc]initWithItems:@[self.raindrop]];
+//    raindropBehavior.elasticity = 1.0;
+    raindropBehavior.resistance = 0.0;
+    raindropBehavior.friction = 0.0;
+    raindropBehavior.allowsRotation = YES;
+    [self.animator addBehavior:raindropBehavior];
 
+    //set properties of the umbrella
+    UIDynamicItemBehavior *umbrellaBehavior = [[UIDynamicItemBehavior alloc]initWithItems:@[self.umbrella]];
+    umbrellaBehavior.anchored = YES;
+    umbrellaBehavior.allowsRotation = NO;
+    [self.animator addBehavior:umbrellaBehavior];
+    
+}
+
+// Pushes the button when it collides with paddle
+-(void)collisionBehavior:(UICollisionBehavior *)behavior beganContactForItem:(id<UIDynamicItem>)item1 withItem:(id<UIDynamicItem>)item2 atPoint:(CGPoint)p{
+    if (item1 == self.raindrop && item2 == self.umbrella){
+        UIPushBehavior *pushBehavior = [[UIPushBehavior alloc] initWithItems:@[self.raindrop] mode:UIPushBehaviorModeInstantaneous];
+        pushBehavior.angle = 30  ;
+        pushBehavior.magnitude = 0.5;
+        [self.animator addBehavior:pushBehavior];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

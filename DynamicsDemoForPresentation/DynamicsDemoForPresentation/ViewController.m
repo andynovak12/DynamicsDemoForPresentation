@@ -34,11 +34,8 @@
     
     [self.animator addBehavior:ballDynamic];
     [self.animator addBehavior:gravityBehavior];
-<<<<<<< HEAD
-    
-=======
     [self.animator addBehavior:collision];
->>>>>>> e4e4ea088059debfddbc64eba873361319a0ef9e
+
 }
 
 @end

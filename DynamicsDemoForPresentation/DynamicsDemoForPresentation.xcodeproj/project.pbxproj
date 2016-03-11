@@ -16,6 +16,7 @@
 		A13E1D101C93595300259904 /* RaindropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A13E1D0F1C93595300259904 /* RaindropViewController.m */; };
 		A13E1D121C935C5100259904 /* raindrop.png in Resources */ = {isa = PBXBuildFile; fileRef = A13E1D111C935C5100259904 /* raindrop.png */; };
 		A13E1D141C935CA400259904 /* umbrella.png in Resources */ = {isa = PBXBuildFile; fileRef = A13E1D131C935CA400259904 /* umbrella.png */; };
+		A13E1D171C937D2900259904 /* HoopsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A13E1D161C937D2900259904 /* HoopsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		A13E1D0F1C93595300259904 /* RaindropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaindropViewController.m; sourceTree = "<group>"; };
 		A13E1D111C935C5100259904 /* raindrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = raindrop.png; path = ../../../../../Downloads/raindrop.png; sourceTree = "<group>"; };
 		A13E1D131C935CA400259904 /* umbrella.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = umbrella.png; path = ../../../../../Downloads/umbrella.png; sourceTree = "<group>"; };
+		A13E1D151C937D2900259904 /* HoopsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoopsViewController.h; sourceTree = "<group>"; };
+		A13E1D161C937D2900259904 /* HoopsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoopsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,15 +73,13 @@
 				A13E1CFB1C92287D00259904 /* ViewController.h */,
 				A13E1CFC1C92287D00259904 /* ViewController.m */,
 				A13E1CFE1C92287D00259904 /* Main.storyboard */,
+				A13E1D151C937D2900259904 /* HoopsViewController.h */,
+				A13E1D161C937D2900259904 /* HoopsViewController.m */,
 				A13E1D0E1C93595300259904 /* RaindropViewController.h */,
 				A13E1D0F1C93595300259904 /* RaindropViewController.m */,
 				A13E1D011C92287D00259904 /* Assets.xcassets */,
-<<<<<<< HEAD
 				A13E1D131C935CA400259904 /* umbrella.png */,
 				A13E1D111C935C5100259904 /* raindrop.png */,
-				A13E1D0C1C934DEA00259904 /* basketball.png */,
-=======
->>>>>>> e4e4ea088059debfddbc64eba873361319a0ef9e
 				A13E1D031C92287D00259904 /* LaunchScreen.storyboard */,
 				A13E1D061C92287D00259904 /* Info.plist */,
 				A13E1CF51C92287D00259904 /* Supporting Files */,
@@ -155,11 +156,7 @@
 				A13E1D121C935C5100259904 /* raindrop.png in Resources */,
 				A13E1D051C92287D00259904 /* LaunchScreen.storyboard in Resources */,
 				A13E1D021C92287D00259904 /* Assets.xcassets in Resources */,
-<<<<<<< HEAD
 				A13E1D141C935CA400259904 /* umbrella.png in Resources */,
-				A13E1D0D1C934DEA00259904 /* basketball.png in Resources */,
-=======
->>>>>>> e4e4ea088059debfddbc64eba873361319a0ef9e
 				A13E1D001C92287D00259904 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A13E1D171C937D2900259904 /* HoopsViewController.m in Sources */,
 				A13E1CFD1C92287D00259904 /* ViewController.m in Sources */,
 				A13E1D101C93595300259904 /* RaindropViewController.m in Sources */,
 				A13E1CFA1C92287D00259904 /* AppDelegate.m in Sources */,
