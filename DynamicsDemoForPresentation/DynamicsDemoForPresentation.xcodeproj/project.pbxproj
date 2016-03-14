@@ -23,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03EC05C14C96452BD3AA4814 /* Pods-DynamicsDemoForPresentation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicsDemoForPresentation.release.xcconfig"; path = "Pods/Target Support Files/Pods-DynamicsDemoForPresentation/Pods-DynamicsDemoForPresentation.release.xcconfig"; sourceTree = "<group>"; };
 		0865ABAC1C96FB7E0030B92C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A13E1CF21C92287D00259904 /* DynamicsDemoForPresentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicsDemoForPresentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13E1CF61C92287D00259904 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		A13E1D2E1C94DCBF00259904 /* hoop1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoop1.png; sourceTree = "<group>"; };
 		A13E1D301C94DE9B00259904 /* court1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = court1.png; sourceTree = "<group>"; };
 		A13E1D321C94DF5500259904 /* court2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = court2.jpg; sourceTree = "<group>"; };
+		DA8EB889704006EDE84BD3B7 /* Pods-DynamicsDemoForPresentation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicsDemoForPresentation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DynamicsDemoForPresentation/Pods-DynamicsDemoForPresentation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +58,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E5D51C2A6D496D8294DC37D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA8EB889704006EDE84BD3B7 /* Pods-DynamicsDemoForPresentation.debug.xcconfig */,
+				03EC05C14C96452BD3AA4814 /* Pods-DynamicsDemoForPresentation.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		683845012BCDBF535EB589E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A13E1CE91C92287D00259904 = {
 			isa = PBXGroup;
 			children = (
 				0865ABAC1C96FB7E0030B92C /* QuartzCore.framework */,
 				A13E1CF41C92287D00259904 /* DynamicsDemoForPresentation */,
 				A13E1CF31C92287D00259904 /* Products */,
+				1E5D51C2A6D496D8294DC37D /* Pods */,
+				683845012BCDBF535EB589E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -296,6 +316,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = DynamicsDemoForPresentation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ASN.DynamicsDemoForPresentation;
@@ -307,6 +332,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = DynamicsDemoForPresentation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ASN.DynamicsDemoForPresentation;
