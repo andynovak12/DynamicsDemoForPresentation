@@ -120,7 +120,7 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iZm-hj-cjb">
                                 <rect key="frame" x="590" y="139" width="12" height="10"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="YQ9-1H-dvD"/>
                                     <constraint firstAttribute="width" constant="12" id="cJm-SC-IDG"/>
