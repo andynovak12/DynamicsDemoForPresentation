@@ -21,6 +21,7 @@
 @property (nonatomic) NSUInteger score;
 @property (weak, nonatomic) IBOutlet UIImageView *hoop;
 @property (nonatomic) BOOL justScorred;
+@property (weak, nonatomic) IBOutlet UIButton *resetGameButton;
 
 @property (nonatomic) CFAbsoluteTime lastTime;
 @end
@@ -33,18 +34,6 @@
     
     self.basketball.layer.cornerRadius = self.basketball.frame.size.height/2;
     self.basketball.clipsToBounds = YES;
-
-    
-    
-    //    [self.basketball.widthAnchor constraintEqualToConstant:50].active = YES;
-//        [self.basketball.heightAnchor constraintEqualToConstant:50].active = YES;
-    
-    
-    
-
-
-
-
     
     // Initialize the animator.
     self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
@@ -58,17 +47,16 @@
     
     //create collisions
     UICollisionBehavior *collisionBehavior = [[UICollisionBehavior alloc] initWithItems:@[self.basketball, self.frontOfRim]];
+    
     //makes our main view’s bounds work as boundaries for the items that will collide.
     collisionBehavior.translatesReferenceBoundsIntoBoundary = YES;
+    
     //dictates that all edges of items that participate to a collision will have the desired behavior.
     collisionBehavior.collisionMode = UICollisionBehaviorModeEverything;
 
-//    collisionBehavior.collisionMode = UICollisionBehaviorModeItems;
     //make view collisionDelegate
     collisionBehavior.collisionDelegate = self;
     [self.animator addBehavior:collisionBehavior];
-    
-
 
     //set the basketballs properties
     UIDynamicItemBehavior *ballDynamic = [[UIDynamicItemBehavior alloc]initWithItems:@[self.basketball]];
@@ -80,44 +68,31 @@
     //set the hoops properties
     UIDynamicItemBehavior *hoopDynamic = [[UIDynamicItemBehavior alloc]initWithItems:@[self.frontOfRim]];
     hoopDynamic.anchored = YES;
-    [self.animator addBehavior:hoopDynamic];
     
-//    [self repositionBall];
-//    NSLog(@"BALL CCROSSED: %d, ", [self ballCrossedHoop]);
+    [self.animator addBehavior:hoopDynamic];
     
     gravityBehavior.action = ^{
         [self updateScore];
     };
-    
-    
-    
-    
 }
 
-
 - (IBAction)ballSwipped:(UIPanGestureRecognizer*)recognizer {
+    
     if (UIGestureRecognizerStateBegan) {
         
         NSLog(@"SELF JUST SCORRED IS BEING SET TO NO!!!!");
         self.justScorred = NO;
-        
-        NSLog(@"started");
     }
+    
     if (UIGestureRecognizerStateEnded){
         
-        
-        NSLog(@"GETTING CALLED!!!!!!!!!!!!!!!!!!!!!!!! stateEnded");
-        
         CGPoint velocity = [recognizer velocityInView:[recognizer.view superview]];
-        // If needed: CGFloat slope = velocity.y / velocity.x;
         CGFloat angle = atan2f(velocity.y, velocity.x);
         CGFloat velocityAsFloat = sqrt(pow(velocity.y,2)+pow(velocity.x, 2));
         
         //push the ball
         [self pushTheBallWithAngle:angle WithVelocity:velocityAsFloat];
-        NSLog(@"%f", angle);
     }
-
 }
 
 -(void)pushTheBallWithAngle:(CGFloat)angle WithVelocity:(CGFloat)velocity{
@@ -127,14 +102,9 @@
     self.pushBehavior.magnitude = velocity/4000;
     self.pushBehavior.angle = angle;
     
-//    [self.animator addBehavior:self.pushBehavior];
     [self.animator addBehavior:self.pushBehavior];
 
-    NSLog(@"pushed");
-    
 }
-
-
 
 -(BOOL)ballCrossedHoop{
     
@@ -145,12 +115,7 @@
     BOOL ballLessThanRightHoop = (self.basketball.center.x < self.hoop.center.x +self.hoop.frame.size.width/2);
     BOOL ballGreaterThanLeftHoop = (self.basketball.center.x > self.hoop.center.x - self.hoop.frame.size.width/2);
     
-
-    
-    
     if (_justScorred) {
-        
-        NSLog(@"JUST SCORED IS YESSSSSS\n\n\n\n");
         
         return  NO;
         
@@ -163,11 +128,9 @@
             
             NSLog(@"GOALLL");
         }
-    return scoreeeee;
         
+    return scoreeeee;
     }
-    
-    
 }
 
 -(void)updateScore{
@@ -176,12 +139,16 @@
     BOOL ballCrossedHoopBool = [self ballCrossedHoop];
     if (ballCrossedHoopBool) {
 
-        
-        NSLog(@"SCOREEEEEEE");
         self.justScorred = YES;
         self.score ++;
-        self.scoreLabel.text = [NSString stringWithFormat: @"%lu", self.score];
+        self.scoreLabel.text = [NSString stringWithFormat: @"SCORE: %lu", self.score];
     }
+}
+
+- (IBAction)didTouchNewGameButton:(id)sender {
+    
+    self.score = 0;
+    self.scoreLabel.text = [NSString stringWithFormat: @"SCORE: %lu", self.score];
 }
 
 @end

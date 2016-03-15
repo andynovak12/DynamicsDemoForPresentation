@@ -156,7 +156,7 @@
 				TargetAttributes = {
 					A13E1CF11C92287D00259904 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 789FGM2SV6;
+						DevelopmentTeam = 972392M658;
 					};
 				};
 			};
@@ -322,8 +322,9 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = DynamicsDemoForPresentation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ASN.DynamicsDemoForPresentation;
+				PRODUCT_BUNDLE_IDENTIFIER = DynamicsDemoForPresentation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -338,8 +339,9 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = DynamicsDemoForPresentation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ASN.DynamicsDemoForPresentation;
+				PRODUCT_BUNDLE_IDENTIFIER = DynamicsDemoForPresentation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
