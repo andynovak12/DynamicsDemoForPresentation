@@ -31,7 +31,7 @@
     UIDynamicItemBehavior *ballDynamic = [[UIDynamicItemBehavior alloc]initWithItems:@[self.basketball]];
     
     ballDynamic.elasticity = 1.0;
-    
+    ballDynamic.resistance = 0;
     [self.animator addBehavior:ballDynamic];
     [self.animator addBehavior:gravityBehavior];
     [self.animator addBehavior:collision];

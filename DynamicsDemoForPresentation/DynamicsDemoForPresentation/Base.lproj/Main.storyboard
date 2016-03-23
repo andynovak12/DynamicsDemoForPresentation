@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hVf-BL-CBu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hVf-BL-CBu">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -37,42 +36,6 @@
             </objects>
             <point key="canvasLocation" x="338" y="334"/>
         </scene>
-        <!--Raindrop View Controller-->
-        <scene sceneID="hc4-Jc-bXY">
-            <objects>
-                <viewController id="IvF-Rs-6AV" customClass="RaindropViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OHV-9i-3GV"/>
-                        <viewControllerLayoutGuide type="bottom" id="4HC-0L-643"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1Nd-nQ-xeD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="umbrella" translatesAutoresizingMaskIntoConstraints="NO" id="LR3-V5-Sm8">
-                                <rect key="frame" x="68" y="398" width="240" height="199"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRR-J0-Oy7">
-                                <rect key="frame" x="200" y="183" width="40" height="57"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="9ox-dG-ucr"/>
-                                    <constraint firstAttribute="height" constant="57" id="ZgV-XK-dVA"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="raindrop.png"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="lRR-J0-Oy7" secondAttribute="trailing" constant="135" id="EZ3-jl-194"/>
-                            <constraint firstItem="lRR-J0-Oy7" firstAttribute="top" secondItem="OHV-9i-3GV" secondAttribute="bottom" constant="163" id="htn-Lg-hwg"/>
-                        </constraints>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FEG-uz-M6y" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="342.5" y="1044.5"/>
-        </scene>
         <!--Hoops View Controller-->
         <scene sceneID="WEs-vu-cJ9">
             <objects>
@@ -82,7 +45,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Y9g-HO-8KE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="skg-LJ-Slc">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="court2" translatesAutoresizingMaskIntoConstraints="NO" id="s6w-Ia-jsD">
@@ -97,13 +60,9 @@
                                 <rect key="frame" x="-189" y="-11" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7c-5m-A7O">
-                                <rect key="frame" x="119" y="296" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7c-5m-A7O" customClass="Ellipse">
+                                <rect key="frame" x="119" y="257" width="50" height="50"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="o3W-03-RJq"/>
-                                    <constraint firstAttribute="width" secondItem="t7c-5m-A7O" secondAttribute="height" multiplier="1:1" id="xDs-Jv-DDc"/>
-                                </constraints>
                                 <state key="normal" image="basketball"/>
                                 <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="119" y="296" width="50" height="50"/>
@@ -112,18 +71,8 @@
                                     <outletCollection property="gestureRecognizers" destination="vuH-sM-DxX" appends="YES" id="grw-za-Z2L"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hoop1" translatesAutoresizingMaskIntoConstraints="NO" id="PI5-4n-ryf">
-                                <rect key="frame" x="590" y="123" width="146" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="146" id="IiG-ed-Sls"/>
-                                    <constraint firstAttribute="height" constant="128" id="ZNs-eM-NIo"/>
-                                </constraints>
-                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="598" y="112" width="146" height="128"/>
-                                </variation>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iZm-hj-cjb">
-                                <rect key="frame" x="590" y="139" width="12" height="10"/>
+                                <rect key="frame" x="531" y="119" width="12" height="10"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="YQ9-1H-dvD"/>
@@ -133,61 +82,59 @@
                                     <rect key="frame" x="598" y="118" width="17" height="14"/>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFg-9X-iPA">
-                                <rect key="frame" x="20" y="7" width="100" height="26"/>
-                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
-                                <state key="normal" title="NEW GAME">
-                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTouchNewGameButton:" destination="hVf-BL-CBu" eventType="touchUpInside" id="cjt-P2-4c8"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pV4-1N-ccr">
-                                <rect key="frame" x="20" y="41" width="198" height="38"/>
-                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="38"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hoop1" translatesAutoresizingMaskIntoConstraints="NO" id="PI5-4n-ryf">
+                                <rect key="frame" x="531" y="103" width="146" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="IiG-ed-Sls"/>
+                                    <constraint firstAttribute="height" constant="128" id="ZNs-eM-NIo"/>
+                                </constraints>
+                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="598" y="112" width="146" height="128"/>
+                                </variation>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gjw-O1-eZS">
+                                <rect key="frame" x="652" y="119" width="15" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="cct-yk-9b9"/>
+                                    <constraint firstAttribute="height" constant="29" id="lKL-7V-Wa2"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="t7c-5m-A7O" firstAttribute="leading" secondItem="skg-LJ-Slc" secondAttribute="leadingMargin" constant="99" id="V1Z-XO-f3P"/>
+                            <constraint firstItem="gjw-O1-eZS" firstAttribute="leading" secondItem="PI5-4n-ryf" secondAttribute="trailing" constant="-25" id="2pA-4H-tLm"/>
+                            <constraint firstItem="PI5-4n-ryf" firstAttribute="top" secondItem="gjw-O1-eZS" secondAttribute="bottom" constant="-45" id="Kp5-Ib-ASx"/>
                             <constraint firstItem="iZm-hj-cjb" firstAttribute="top" secondItem="PI5-4n-ryf" secondAttribute="top" constant="16" id="XOv-Ii-Lgt"/>
-                            <constraint firstItem="Y9g-HO-8KE" firstAttribute="top" secondItem="t7c-5m-A7O" secondAttribute="bottom" constant="68" id="acF-3o-78o"/>
                             <constraint firstItem="PI5-4n-ryf" firstAttribute="centerY" secondItem="skg-LJ-Slc" secondAttribute="centerY" constant="-20" id="fr2-Qh-6Sp"/>
-                            <constraint firstAttribute="trailing" secondItem="PI5-4n-ryf" secondAttribute="trailing" id="ixk-Ze-Idq"/>
+                            <constraint firstAttribute="trailing" secondItem="PI5-4n-ryf" secondAttribute="trailing" constant="-10" id="ixk-Ze-Idq"/>
                             <constraint firstItem="s6w-Ia-jsD" firstAttribute="top" secondItem="skg-LJ-Slc" secondAttribute="topMargin" constant="-21" id="lFL-d9-pZY"/>
                             <constraint firstItem="s6w-Ia-jsD" firstAttribute="leading" secondItem="skg-LJ-Slc" secondAttribute="leadingMargin" constant="-219" id="oDf-rT-R6I"/>
                             <constraint firstItem="iZm-hj-cjb" firstAttribute="leading" secondItem="PI5-4n-ryf" secondAttribute="leading" id="zLS-TV-005"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="backOfRim" destination="gjw-O1-eZS" id="vPz-o5-1rr"/>
                         <outlet property="basketball" destination="t7c-5m-A7O" id="gHP-qp-lIR"/>
                         <outlet property="frontOfRim" destination="iZm-hj-cjb" id="qPN-fh-iTO"/>
                         <outlet property="hoop" destination="PI5-4n-ryf" id="LJU-wL-lC2"/>
-                        <outlet property="resetGameButton" destination="uFg-9X-iPA" id="0vw-hV-J2g"/>
-                        <outlet property="scoreLabel" destination="pV4-1N-ccr" id="uZy-ja-9dO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VEp-id-c7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="9gl-L8-OJf"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="vuH-sM-DxX">
                     <connections>
                         <action selector="ballSwipped:" destination="hVf-BL-CBu" id="0Nw-n1-jfd"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="384" y="1815"/>
+            <point key="canvasLocation" x="305.5" y="910.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="basketball" width="347" height="345"/>
         <image name="court2" width="2560" height="1600"/>
         <image name="hoop1" width="460" height="460"/>
-        <image name="raindrop.png" width="2000" height="3084"/>
-        <image name="umbrella" width="512" height="512"/>
     </resources>
 </document>

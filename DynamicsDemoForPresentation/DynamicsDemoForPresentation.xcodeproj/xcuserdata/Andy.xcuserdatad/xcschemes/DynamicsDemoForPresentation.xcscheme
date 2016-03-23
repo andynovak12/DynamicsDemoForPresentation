@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A13E1CF11C92287D00259904"
-               BuildableName = "DynamicsDemoForPresentation.app"
+               BuildableName = "Hoops.app"
                BlueprintName = "DynamicsDemoForPresentation"
                ReferencedContainer = "container:DynamicsDemoForPresentation.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A13E1CF11C92287D00259904"
-            BuildableName = "DynamicsDemoForPresentation.app"
+            BuildableName = "Hoops.app"
             BlueprintName = "DynamicsDemoForPresentation"
             ReferencedContainer = "container:DynamicsDemoForPresentation.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A13E1CF11C92287D00259904"
-            BuildableName = "DynamicsDemoForPresentation.app"
+            BuildableName = "Hoops.app"
             BlueprintName = "DynamicsDemoForPresentation"
             ReferencedContainer = "container:DynamicsDemoForPresentation.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A13E1CF11C92287D00259904"
-            BuildableName = "DynamicsDemoForPresentation.app"
+            BuildableName = "Hoops.app"
             BlueprintName = "DynamicsDemoForPresentation"
             ReferencedContainer = "container:DynamicsDemoForPresentation.xcodeproj">
          </BuildableReference>
